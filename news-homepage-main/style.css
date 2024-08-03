@@ -1,0 +1,203 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+footer{
+    padding: 1rem;
+}
+
+
+body { 
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    margin-inline: 1rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+}
+
+header nav {
+    display: flex;
+    gap: 2rem;
+}
+header nav > div {
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+    "img img News"
+    "title paragraph News"
+    "list1  list2    list3";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px 30px;
+    margin-inline: 0rem;  
+}
+
+.main-img {
+    grid-area: img;
+    width: 100%;
+}
+
+.title-text {
+    grid-area: title;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.paragraph {
+    grid-area: paragraph;
+    color: hsl(233, 8%, 79%);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    width: 15rem;
+    height: 2.8rem;
+    font-weight: 700;
+    color: hsl(36, 100%, 99%);
+    cursor: pointer;
+
+    letter-spacing: 0.5rem;
+}
+
+.News {
+    grid-area: News;
+    grid-template-columns: max-content;
+    background-color:hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.News h2 {
+    font-size: 32px;
+    color: hsl(35, 77%, 62%);
+    margin: 0;
+}
+.News h3 {
+    cursor: pointer;
+}
+
+.News >*{
+    padding: 0rem 1rem;
+}
+
+hr {
+    width: 80%;
+    border: 1px solid white;
+}
+
+
+.list1 {
+    grid-area: list1;
+}
+.list2 {
+    grid-area: list2;
+    
+}
+.list3 {
+    grid-area: list3;
+}
+
+section {
+    display: flex;
+    gap: 0.5rem;
+    height: 9rem;
+}
+
+section img {
+    height: 100%;
+}
+
+
+section div > * {
+    margin: 0.2rem;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section p {
+    width: 10rem;
+    color: hsl(233, 8%, 79%);
+}
+
+p {
+    font-size: 15px;
+}
+section h1 {
+    font-size: 30px;
+    color: hsl(233, 8%, 79%);
+}
+
+
+h3 {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+nav div:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+.News h3:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+
+section h3:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+button:hover {
+    background-color: hsl(240, 100%, 5%);
+}
+
+
+@media (max-width: 60em) {
+
+    body {
+        margin-inline: 1rem;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .main-img {
+        content: url(./assets/images/image-web-3-mobile.jpg);
+    }
+
+    main {
+        display: grid;
+
+        grid-template-areas:
+        "img"
+        "title"
+        "paragraph"
+        "News"
+        "list1"
+        "list2"
+        "list3";
+        grid-template-columns: 1fr;
+        grid-gap: 20px 0px;
+        padding: 0rem 0.5rem;
+    }
+
+    .navbar {
+        display: none;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | QR code component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <img src="./images/image-qr-code.png">
+
+      <div class="text-container">
+        <div class="bold-text">
+          Improve your front-end skills by building projects
+        </div>
+
+        <div class="text">
+          Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+        </div>
+      </div>
+    </div>
+
+
+    <style>
+      body {
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:  hsl(212, 45%, 89%);
+
+      }
+
+      .container {
+        background-color: hsl(0, 0%, 100%);
+        width: 18rem;
+        padding: 1rem;
+        border-radius: 20px;
+      }
+
+      img {
+        width: inherit;
+        border-radius: 20px;
+      }
+
+      .text-container {
+        padding: 1rem;
+      }
+      
+      .bold-text {
+        display: flex;
+        font-family: "outfit";
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0rem -1rem;
+        margin-bottom: 1rem;
+        color: hsl(218, 44%, 22%);
+      }
+      
+      .text {
+        font-family: "outfit";
+        text-align: center;
+        font-weight: 400;
+        font-size: 15px;
+        color:hsl(220, 15%, 55%);
+        
+      }
+
+    </style>
+
+  </body>
+</html>

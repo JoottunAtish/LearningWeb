@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+
+  <main class="container">
+    <header class="community">
+      <h1>Join our community</h1>
+      <h3>30-day, hassle-free money back guarantee</h3>
+      <p>
+        Gain access to our full library of tutorials along with expert code
+        reviews.
+        Perfect for any developers who are serious about honing their skills.
+      </p>
+    </header>
+
+    <article class="subscription">
+      <h3>Monthly Subscription</h3>
+
+      <div class="price-container">
+        <p class="price"> &dollar;29</p>
+        <p class="monthly">per month</p>
+      </div>
+
+      <p>Full access for less than &dollar;1 a day</p>
+
+      <button class="sign-up">Sign Up</button>
+    </article>
+
+    <article class="why-us">
+      <h3>why Us</h3>
+      <div>
+        <p>Tutorials by industry experts</p>
+        <p>Peer &amp; expert code review</p>
+        <p>Coding exercises</p>
+        <p>Access to our GitHub repos</p>
+        <p>Community forum</p>
+        <p>Flashcard decks</p>
+        <p>New videos every week</p>
+      </div>
+    </article>
+
+  </main>
+
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    :root {
+      --border-radius: 0.5rem;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: hsl(204, 43%, 93%);
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 37rem;
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "subs   why-us";
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      border-radius: var(--border-radius);
+      box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.273);
+    }
+
+    .community {
+      background-color: white;
+      grid-area: header;
+
+      border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+
+      font-size: 16px;
+    }
+
+    .subscription {
+      background-color: hsl(179, 62%, 43%);
+      grid-area: subs;
+      border-radius: 0px 0px 0px var(--border-radius);
+    }
+
+    .why-us {
+      grid-area: why-us;
+      background-color: hsla(175, 72%, 43%, 0.851);
+      Font-size: 16px;
+      border-radius: 0px 0px var(--border-radius) 0px;
+      color: hsl(204, 43%, 93%);
+    }
+
+    .community,
+    .subscription,
+    .why-us {
+      padding: 1.8rem;
+
+    }
+
+    .community>*,
+    .subscription>*,
+    .why-us>* {
+      font-family: 'Karla', sans-serif;
+
+    }
+
+    .community h1 {
+      font-size: 24px;
+      color: hsl(179, 62%, 43%);
+      font-weight: 700;
+    }
+
+    .community h3 {
+      font-size: 18px;
+      color: hsl(71, 73%, 54%);
+      font-weight: 700;
+    }
+
+    .community p {
+      color: hsl(218, 22%, 67%);
+    }
+
+    .subscription {
+      color: hsl(204, 43%, 93%);
+    }
+
+    .subscription h3,
+    .why-us h3 {
+      font-size: 16px;
+    }
+
+
+    .subscription p {
+      margin-top: 0rem;
+    }
+
+    .price-container {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .price {
+      font-size: 35px;
+      font-weight: 700;
+    }
+
+    .price-container>* {
+      margin: 0;
+    }
+
+    .monthly {
+      color: hsla(0, 0%, 100%, 0.5);
+    }
+
+    button {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      height: 30%;
+
+      box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.167);
+      border: none;
+      background-color: hsl(71, 73%, 54%);
+      font-weight: 700;
+      color: hsl(204, 43%, 93%);
+      border-radius: var(--border-radius);
+    }
+
+    button:hover {
+      background-color: hsl(69, 69%, 49%);
+    }
+
+    .why-us div {
+      font-size: 14px;
+      padding-bottom: 1rem;
+    }
+
+    .why-us p {
+      margin: 0;
+      color: hsla(203, 44%, 93%, 0.726);
+    }
+
+
+
+    @media (max-width: 30em) {
+      .container {
+        grid-template-areas:
+          "header"
+          "subs"
+          "why-us";
+
+        grid-template-columns: 1fr;
+      }
+
+      .subscription {
+        border-radius: 0;
+      }
+
+      .why-us {
+        border-radius: 0px 0px var(--border-radius) var(--border-radius);
+      }
+    }
+  </style>
+
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+        target="https://www.frontendmentor.io/">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/AtishJoottun">Atish Joottun</a>.
+    </p>
+  </footer>
+</body>
+
+</html>

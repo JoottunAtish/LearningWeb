@@ -1,0 +1,113 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 89%, 74%); }
+
+
+body {
+    background-color: hsl(228, 11%, 9%);
+    color: white;
+    overflow: hidden;
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Overpass', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20rem;
+    background-color: hsl(215, 22%, 15%);
+    padding: 1.8rem;
+
+    border-radius: 25px;
+}
+
+header {
+    background-color: hsl(213, 19%, 18%);
+    width: fit-content;
+    padding: 0.6rem;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Rating-question h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.Rating-question p {
+    font-size: 15px;
+    font-weight: 400px;
+    color: hsl(216, 12%, 54%);
+    margin-bottom: 5px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rating li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in;    
+
+
+    width: 2rem;
+    height: 2rem;
+
+    padding: 0.5rem;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 100%;
+
+    margin: 1rem 0rem;
+    color: hsl(217, 12%, 63%);
+    font-weight: 700;
+
+}
+
+button {
+    background-color: hsl(25, 97%, 53%);
+    height: 3rem;
+    border-radius: 50px;
+    border:none;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 4px;
+
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+    transition: 0.2s ease-in;    
+
+}
+
+.rating li {
+    list-style: none;
+    cursor: pointer;
+}
+
+
+/* <---------------interaction------------------> */
+
+button:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+    transition: 0.2s ease-in;
+}
+
+li:hover {
+    background-color: hsl(25, 97%, 53%) !important;
+    color: white !important;
+    transition: 0.2s ease-in;    
+}
